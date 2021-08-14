@@ -11,7 +11,7 @@ public class Dialogue : MonoBehaviour
 
     public string[] sentences;
     private int index;
-    private float TypingSpeed;
+    private float TypingSpeed = 0.05f;
     public GameObject button;
     public GameObject button2;
     public bool SubjectResponds;
@@ -43,6 +43,8 @@ public class Dialogue : MonoBehaviour
         scene = SceneManager.GetActiveScene();
         thisScene = scene.name;
         Q1 = true;
+
+       
     }
 
     private void Update()
@@ -79,6 +81,11 @@ public class Dialogue : MonoBehaviour
             index++;
             dialogueText.text = "";
             StartCoroutine(SlowType());
+        }
+        else   //Dialogue has ended
+        {
+            dialogueText.text = "";
+            button.SetActive(false);
         }
     }
 
