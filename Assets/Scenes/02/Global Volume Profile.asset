@@ -32,13 +32,13 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   temperature:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 37
     min: -100
     max: 100
   tint:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -39
     min: -100
     max: 100
 --- !u!114 &11400000
@@ -55,3 +55,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: -7419256706721300166}
+  - {fileID: -323774512459532148}
