@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Water-Flow
   m_Shader: {fileID: 4800000, guid: 58f047517fd799149bfc42cb67a78e41, type: 3}
   m_ShaderKeywords: BLEND_ADDITIVE BLEND_COLOR_ENABLED BLEND_ENABLED FOURTH_ENABLED
@@ -188,7 +189,8 @@ Material:
     - _FirstWaveUandVspeedZWNotused: {r: 0, g: 0, b: 0, a: 0}
     - _FourthWaveUandVspeed: {r: 0, g: 0, b: 0, a: 0}
     - _FourthWaveUandVspeedZWNotused: {r: -0.05, g: -0.075, b: 0, a: 0}
-    - _SecondWaveUandVspeed: {r: -0.12, g: 0.51, b: 0, a: 0}
+    - _SecondWaveUandVspeed: {r: 0, g: 0.51, b: 0, a: 0}
     - _SecondWaveUandVspeedZWNotused: {r: -0.05, g: -0.075, b: 0, a: 0}
     - _ThirdWaveUandVspeed: {r: -0.01, g: 0.32, b: 0, a: 0}
     - _ThirdWaveUandVspeedZWNotused: {r: -0.05, g: -0.075, b: 0, a: 0}
+  m_BuildTextureStacks: []
