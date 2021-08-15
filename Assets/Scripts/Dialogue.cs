@@ -20,6 +20,9 @@ public class Dialogue : MonoBehaviour
     public bool ScriptBlank = false;
     Scene scene;
     private string thisScene;
+    private bool EndTimer = false;
+
+
 
     public bool A;
     public bool B;
@@ -104,11 +107,6 @@ public class Dialogue : MonoBehaviour
         button2.SetActive(false);
         timeLeftWarning += 15f;
         timeLeftEnd += 15f;
-
-        if (scene.name == "04")
-        {
-
-        }
     }
 
     public void CheckPlayerResponse() //Call this response when player does not/does complete task.
@@ -137,23 +135,30 @@ public class Dialogue : MonoBehaviour
             }
         }
 
-        timeLeftWarning -= Time.deltaTime;
-        if (timeLeftWarning < 0 && ScriptBlank == false)
+        if (EndTimer == false)
         {
-            ScriptBlank = false;
-            dialogueText2.text = "Subject has not responded. Perhaps an error has been made.";
+            timeLeftWarning -= Time.deltaTime;
+            if (timeLeftWarning < 0 && ScriptBlank == false)
+            {
+                ScriptBlank = false;
+                dialogueText2.text = "Subject has not responded. Perhaps an error has been made.";
 
-            button2.SetActive(false);
+                button2.SetActive(false);
+            }
         }
 
-        timeLeftEnd -= Time.deltaTime;
-        if (timeLeftEnd < 0)
+        if (EndTimer == false)
         {
-            ScriptBlank = false;
-            dialogueText2.text = "The task has not been executed. \nHenceforth, it is recommended that the subject be terminated.";
+            timeLeftEnd -= Time.deltaTime;
+            if (timeLeftEnd < 0)
+            {
+                ScriptBlank = false;
+                dialogueText2.text = "The task has not been executed. \nHenceforth, it is recommended that the subject be terminated.";
 
-            button2.SetActive(true);
+                button2.SetActive(true);
+            }
         }
+
 
         if (timeLeftEnd <= -5)
         {
@@ -165,6 +170,8 @@ public class Dialogue : MonoBehaviour
     {
         if (scene.name == "04" && index >= 2)
         {
+            EndTimer = true; //End the timers which bring up the warning and fail dialogue.
+
             if (Q1 == true)
             {
                 dialogueText2.text = "A building has been bombed by war machines. " +
