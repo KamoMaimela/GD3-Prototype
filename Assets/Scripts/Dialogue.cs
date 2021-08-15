@@ -78,8 +78,9 @@ public class Dialogue : MonoBehaviour
     public void NextSection()
     {
         button.SetActive(false);
-        timeLeftWarning += 5f;
-        timeLeftEnd += 5f;
+       // dialogueText2.text = "";
+        timeLeftWarning += 10f;
+        timeLeftEnd += 10f;
 
         if (index < sentences.Length - 1)
         {
@@ -92,6 +93,8 @@ public class Dialogue : MonoBehaviour
             dialogueText.text = "";
             button.SetActive(false);
         }
+
+        
     }
 
     public void EndNextSection()
@@ -99,8 +102,8 @@ public class Dialogue : MonoBehaviour
         ScriptBlank = true;
         dialogueText2.text = "";
         button2.SetActive(false);
-        timeLeftWarning += 5f;
-        timeLeftEnd += 5f;
+        timeLeftWarning += 15f;
+        timeLeftEnd += 15f;
 
         if (scene.name == "04")
         {
@@ -119,8 +122,8 @@ public class Dialogue : MonoBehaviour
                 dialogueText2.text = "Subject has responded and moved to the audio source. Continue with with necessary tests.";
                 button2.SetActive(true);
                 button.SetActive(false);
-                timeLeftWarning += 5f;
-                timeLeftEnd += 5f;
+                timeLeftWarning += 15f;
+                timeLeftEnd += 15f;
             }
         }
 
@@ -140,7 +143,7 @@ public class Dialogue : MonoBehaviour
             ScriptBlank = false;
             dialogueText2.text = "Subject has not responded. Perhaps an error has been made.";
 
-            button2.SetActive(true);
+            button2.SetActive(false);
         }
 
         timeLeftEnd -= Time.deltaTime;
@@ -150,6 +153,11 @@ public class Dialogue : MonoBehaviour
             dialogueText2.text = "The task has not been executed. \nHenceforth, it is recommended that the subject be terminated.";
 
             button2.SetActive(true);
+        }
+
+        if (timeLeftEnd <= -5)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
