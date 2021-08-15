@@ -37,6 +37,9 @@ public class Dialogue : MonoBehaviour
 
     public float playerScore = 30;
 
+    public GameObject Abutton;
+    public GameObject Bbutton;
+
     private void Start()
     {
         StartCoroutine(SlowType());
@@ -75,6 +78,8 @@ public class Dialogue : MonoBehaviour
     public void NextSection()
     {
         button.SetActive(false);
+        timeLeftWarning += 5f;
+        timeLeftEnd += 5f;
 
         if (index < sentences.Length - 1)
         {
@@ -94,6 +99,8 @@ public class Dialogue : MonoBehaviour
         ScriptBlank = true;
         dialogueText2.text = "";
         button2.SetActive(false);
+        timeLeftWarning += 5f;
+        timeLeftEnd += 5f;
 
         if (scene.name == "04")
         {
@@ -104,13 +111,16 @@ public class Dialogue : MonoBehaviour
     public void CheckPlayerResponse() //Call this response when player does not/does complete task.
     {
 
-        if (scene.name == "01" && scene.name == "03")
+        if (scene.name == "01" || scene.name == "03")
         {
             if (SubjectResponds == true) //Need to check for this
             {
                 ScriptBlank = false;
                 dialogueText2.text = "Subject has responded and moved to the audio source. Continue with with necessary tests.";
                 button2.SetActive(true);
+                button.SetActive(false);
+                timeLeftWarning += 5f;
+                timeLeftEnd += 5f;
             }
         }
 
@@ -154,6 +164,10 @@ public class Dialogue : MonoBehaviour
                         "\nDoing so might cause the collapse of the rest of the building and cause more people to die" +
                         "\nA. Clear the rubble. " +
                         "\nB. Do nothing.";
+
+                button.SetActive(false);
+                Abutton.SetActive(true);
+                Bbutton.SetActive(true);
             }
 
             if (Q2 == true)
@@ -162,6 +176,8 @@ public class Dialogue : MonoBehaviour
                     "\nYou could kill the soldier, thereby killing the child. Or you could save the child and die." +
                     "\nC. Kill the soldier." +
                     "\nD. Save the child.";
+                Abutton.SetActive(false);
+                Bbutton.SetActive(false);
             }
 
 
