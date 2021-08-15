@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 39620076}
   m_Layer: 0
   m_Name: Cylinder_02
-  m_TagString: Untagged
+  m_TagString: GreenCylinder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 378789933}
   - component: {fileID: 378789932}
   - component: {fileID: 378789931}
+  - component: {fileID: 378789937}
   m_Layer: 0
   m_Name: Ball_02
   m_TagString: GreenBall
@@ -928,6 +929,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378789929}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &378789937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378789929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942a267ad5f3b264ebfe675f7ad3ae36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393329502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,7 +1929,7 @@ GameObject:
   - component: {fileID: 619255584}
   m_Layer: 0
   m_Name: Cylinder_03
-  m_TagString: Untagged
+  m_TagString: RedCylinder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2013,6 +2026,7 @@ GameObject:
   - component: {fileID: 646132502}
   - component: {fileID: 646132501}
   - component: {fileID: 646132500}
+  - component: {fileID: 646132506}
   m_Layer: 0
   m_Name: Ball_03
   m_TagString: RedBall
@@ -2142,6 +2156,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646132498}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &646132506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646132498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a6e915ae78720468abc1355e108151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,7 +2758,7 @@ GameObject:
   - component: {fileID: 808667912}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3069,7 +3095,7 @@ GameObject:
   - component: {fileID: 878944926}
   m_Layer: 0
   m_Name: Cylinder_01
-  m_TagString: Untagged
+  m_TagString: RedCylinder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3107,7 +3133,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4da2866442403114e9054269b51e5637, type: 2}
+  - {fileID: 2100000, guid: 676fe2cc9e1905f4caec1754719d812b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3879,6 +3905,7 @@ GameObject:
   - component: {fileID: 992648691}
   - component: {fileID: 992648692}
   - component: {fileID: 992648693}
+  - component: {fileID: 992648694}
   m_Layer: 0
   m_Name: Ball_01
   m_TagString: GreenBall
@@ -4008,6 +4035,18 @@ ScaleConstraint:
   m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources: []
+--- !u!114 &992648694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992648686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942a267ad5f3b264ebfe675f7ad3ae36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1024346527
 GameObject:
   m_ObjectHideFlags: 0
@@ -10930,3 +10969,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073277596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2103615406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2103615409}
+  - component: {fileID: 2103615408}
+  - component: {fileID: 2103615407}
+  m_Layer: 0
+  m_Name: ColourTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2103615407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103615406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900f9ab6a4cbcd543bd35f1b46ee9c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 676fe2cc9e1905f4caec1754719d812b, type: 2}
+--- !u!65 &2103615408
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103615406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.2464004, y: 0.8230145, z: 2.0944357}
+  m_Center: {x: 0.38422465, y: -0.08849275, z: 0.54721785}
+--- !u!4 &2103615409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103615406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.63, y: -2.338, z: -9.253}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
