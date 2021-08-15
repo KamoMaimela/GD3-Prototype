@@ -8,7 +8,7 @@ public class Fog : MonoBehaviour
     void Start()
     {
         RenderSettings.fogColor = Camera.main.backgroundColor;
-        RenderSettings.fogDensity = 0.03f;
+        RenderSettings.fogDensity = 10f;
         RenderSettings.fog = true;
     }
 
