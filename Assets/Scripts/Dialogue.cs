@@ -117,7 +117,7 @@ public class Dialogue : MonoBehaviour
             if (SubjectResponds == true) //Need to check for this
             {
                 ScriptBlank = false;
-                dialogueText2.text = "Subject has responded and moved to the audio source. Continue with with necessary tests.";
+                dialogueText2.text = "Subject has responded. Continue with with necessary tests.";
                 dialogueText2.GetComponent<Text>().color = Color.white;
                 button2.SetActive(true);
                 button.SetActive(false);
