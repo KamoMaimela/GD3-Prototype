@@ -118,6 +118,7 @@ public class Dialogue : MonoBehaviour
             {
                 ScriptBlank = false;
                 dialogueText2.text = "Subject has responded and moved to the audio source. Continue with with necessary tests.";
+                dialogueText2.GetComponent<Text>().color = Color.white;
                 button2.SetActive(true);
                 button.SetActive(false);
                 timeLeftWarning += 15f;
@@ -131,29 +132,37 @@ public class Dialogue : MonoBehaviour
             {
                 ScriptBlank = false;
                 dialogueText2.text = "Subject has only been able to partly execute the task.\nRevision may be needed to the original procedure performed due to potential errors\nas previously stipulated.";
+                dialogueText2.GetComponent<Text>().color = Color.white;
                 button2.SetActive(true);
             }
         }
 
         if (EndTimer == false)
         {
+
+            ScriptBlank = false;
+            
             timeLeftWarning -= Time.deltaTime;
             if (timeLeftWarning < 0 && ScriptBlank == false)
             {
                 ScriptBlank = false;
                 dialogueText2.text = "Subject has not responded. Perhaps an error has been made.";
-
+                dialogueText2.GetComponent<Text>().color = Color.red;
                 button2.SetActive(false);
             }
         }
 
         if (EndTimer == false)
         {
+
+            ScriptBlank = false;
+           
             timeLeftEnd -= Time.deltaTime;
-            if (timeLeftEnd < 0)
+            if (timeLeftEnd <= 0)
             {
                 ScriptBlank = false;
                 dialogueText2.text = "The task has not been executed. \nHenceforth, it is recommended that the subject be terminated.";
+                dialogueText2.GetComponent<Text>().color = Color.red;
 
                 button2.SetActive(true);
             }
@@ -179,7 +188,7 @@ public class Dialogue : MonoBehaviour
                         "\nDoing so might cause the collapse of the rest of the building and cause more people to die" +
                         "\nA. Clear the rubble. " +
                         "\nB. Do nothing.";
-
+                dialogueText2.GetComponent<Text>().color = Color.white;
                 button.SetActive(false);
                 Abutton.SetActive(true);
                 Bbutton.SetActive(true);
@@ -191,6 +200,7 @@ public class Dialogue : MonoBehaviour
                     "\nYou could kill the soldier, thereby killing the child. Or you could save the child and die." +
                     "\nC. Kill the soldier." +
                     "\nD. Save the child.";
+                dialogueText2.GetComponent<Text>().color = Color.white;
                 Abutton.SetActive(false);
                 Bbutton.SetActive(false);
             }
@@ -203,6 +213,7 @@ public class Dialogue : MonoBehaviour
                     "\nThis would render you blind." +
                     "\nE. Give them to her." +
                     "\nF. Refuse.";
+                dialogueText2.GetComponent<Text>().color = Color.white;
             }
             if (Q4 == true)
             {
@@ -211,6 +222,7 @@ public class Dialogue : MonoBehaviour
                     "\nIt will not be painless." +
                     "\nG. Exterminate the child." +
                     "\nH. Leave the child";
+                dialogueText2.GetComponent<Text>().color = Color.white;
             }
 
 
@@ -222,6 +234,7 @@ public class Dialogue : MonoBehaviour
                 ScriptBlank = false;
                 dialogueText2.text = "Subject has only been able to partly execute the task.\nRevision may be needed to the original procedure performed due to potential errors\nas previously stipulated.";
                 button2.SetActive(true);
+                dialogueText2.GetComponent<Text>().color = Color.white;
             }
         }
     }
