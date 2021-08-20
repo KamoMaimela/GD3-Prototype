@@ -9,12 +9,10 @@ public class Eat : MonoBehaviour
 
     public Text dialogueText;
 
-    float distance;
 
-    void OnMouseDown()
+    void OnMouseDown() //Clicking on the food item makes a chewing sound.
     {
         EatSound.Play();
-        dialogueText.text = "";
     }
 
 }

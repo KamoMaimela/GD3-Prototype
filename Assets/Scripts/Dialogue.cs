@@ -22,6 +22,8 @@ public class Dialogue : MonoBehaviour
     private string thisScene;
     private bool EndTimer = false;
 
+    public bool FoodTimer = false;
+
 
 
     public bool A;
@@ -50,7 +52,6 @@ public class Dialogue : MonoBehaviour
         thisScene = scene.name;
         Q1 = true;
 
-       
     }
 
     private void Update()
@@ -84,6 +85,7 @@ public class Dialogue : MonoBehaviour
        // dialogueText2.text = "";
         timeLeftWarning += 10f;
         timeLeftEnd += 10f;
+        
 
         if (index < sentences.Length - 1)
         {
@@ -95,6 +97,7 @@ public class Dialogue : MonoBehaviour
         {
             dialogueText.text = "";
             button.SetActive(false);
+            FoodTimer = true;
         }
 
         
@@ -107,6 +110,7 @@ public class Dialogue : MonoBehaviour
         button2.SetActive(false);
         timeLeftWarning += 15f;
         timeLeftEnd += 15f;
+        
     }
 
     public void CheckPlayerResponse() //Call this response when player does not/does complete task.
@@ -177,7 +181,7 @@ public class Dialogue : MonoBehaviour
 
     public void EndDialogue()
     {
-        if (scene.name == "04" && index >= 2)
+        if (scene.name == "05" && index >= 2)
         {
             EndTimer = true; //End the timers which bring up the warning and fail dialogue.
 
