@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FoodDrop : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class FoodDrop : MonoBehaviour
     public float seconds = 0f;
 
     public GameObject Food;
+
+    public Text dialogueText;
 
     void Update()
     {
@@ -23,5 +26,6 @@ public class FoodDrop : MonoBehaviour
     void Drop()
     {
         Food.SetActive(true);
+        dialogueText.text = "Food Time";
     }
 }
