@@ -10,6 +10,7 @@ public class PickupFood : MonoBehaviour
     public bool SibEaten = false;
 
     public float seconds = 0;
+    public bool SiblingDetect = false;
 
     void OnMouseDown()
     {
@@ -33,6 +34,7 @@ public class PickupFood : MonoBehaviour
             Mesh mesh = GetComponent<MeshFilter>().mesh;
             mesh.Clear();
             SibEaten = true;
+
         }
     }
 
@@ -47,5 +49,8 @@ public class PickupFood : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
+
+
+
     }
 }
