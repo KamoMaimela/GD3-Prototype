@@ -7,7 +7,7 @@ public class BellTrigger : MonoBehaviour
 {
     public float seconds = 0f;
 
-    public static Text dialogueText;
+    public Text dialogueText;
 
     public bool Inside;
 
@@ -32,10 +32,11 @@ public class BellTrigger : MonoBehaviour
            seconds += Time.deltaTime;
         }
 
-        if (seconds >= 8) 
+        if (seconds >= 7) 
         {
             Bell.SetActive(true); //Only make a call for food once the player has gone and interacted with their sibling
             SecondPhase = true;
+            dialogueText.text = "Food time.";
         }     
 
     }

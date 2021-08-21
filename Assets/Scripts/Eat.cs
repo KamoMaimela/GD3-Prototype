@@ -26,19 +26,19 @@ public class Eat : MonoBehaviour
     void Update()
     {
         //adding a timer so that once the player has eaten, food item disappears
-        
+
         if (HasEaten)
         {
             seconds += Time.deltaTime;
         }
-        
-        if (seconds >= 5)
+
+        if (seconds >= 3)
         {
             Mesh mesh = GetComponent<MeshFilter>().mesh;
             mesh.Clear();
         }
 
-        if (seconds >= 9) //Change scene
+        if (seconds >= 5) //Change scene
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
