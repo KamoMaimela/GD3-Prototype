@@ -8,6 +8,7 @@ TagManager:
   - RedBall
   - GreenCylinder
   - RedCylinder
+  - Sibling
   layers:
   - Default
   - TransparentFX
