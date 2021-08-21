@@ -24,5 +24,7 @@ public class Cam : MonoBehaviour
         {
             grabbedOBJ.GetComponent<Rigidbody>().velocity = 10 * (grabPos.position - grabbedOBJ.transform.position);
         }
+
+            
     }
 }

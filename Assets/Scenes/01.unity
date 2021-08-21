@@ -6292,8 +6292,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907510557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.6604, y: -1.965, z: -8.9319}
-  m_LocalScale: {x: 0.44218662, y: 0.44218662, z: 0.44218662}
+  m_LocalPosition: {x: -4.6604, y: -1.965, z: -11.33}
+  m_LocalScale: {x: 0.44218662, y: 0.44218662, z: 1.5966032}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -6341,7 +6341,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0625
+      time: 0.012550354
       value: 1
       inSlope: 0
       outSlope: 0
@@ -6350,8 +6350,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.95025635
-      value: 0.014663696
+      time: 0.6205902
+      value: 0
       inSlope: -1.0666667
       outSlope: -1.0666667
       tangentMode: 0

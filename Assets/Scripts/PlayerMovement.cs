@@ -70,5 +70,10 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = 4;
         }
+
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
+        }
     }
 }
