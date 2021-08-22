@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndingScene : MonoBehaviour
 {
     public bool SiblingDetect = false;
+    public float seconds = 0f;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -23,7 +24,13 @@ public class EndingScene : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene("Start"); //Take to scene 6 showing empty box.
+                SceneManager.LoadScene("Start");
+            }
+
+            seconds += Time.deltaTime;
+            if (seconds >= 10)
+            {
+                SceneManager.LoadScene("Start");
             }
         }
     }
