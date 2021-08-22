@@ -8902,7 +8902,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seconds: 0
+  secondsScene3: 0
+  secondsUntilEnd: 0
   dialogueText: {fileID: 161065492}
+  dialogueText2: {fileID: 0}
   Inside: 0
   Bell: {fileID: 1392674606}
   SecondPhase: 0
@@ -19046,6 +19049,7 @@ MonoBehaviour:
   theDestination: {fileID: 28622888}
   SibEaten: 0
   seconds: 0
+  SiblingDetect: 0
 --- !u!54 &2124580074
 Rigidbody:
   m_ObjectHideFlags: 0

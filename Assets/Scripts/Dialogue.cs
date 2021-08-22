@@ -176,169 +176,169 @@ public class Dialogue : MonoBehaviour
     {
         if (scene.name == "05" && index >= 2)
         {
-            EndTimer = true; //End the timers which bring up the warning and fail dialogue.
+            //EndTimer = true; //End the timers which bring up the warning and fail dialogue.
 
-            if (Q1 == true)
-            {
-                dialogueText2.text = "A building has been bombed by war machines. " +
-                        "\nYou have been given an official order to clear the rubble. " +
-                        "\nDoing so might cause the collapse of the rest of the building and cause more people to die" +
-                        "\nA. Clear the rubble. " +
-                        "\nB. Do nothing.";
-                dialogueText2.GetComponent<Text>().color = Color.white;
-                button.SetActive(false);
-                Abutton.SetActive(true);
-                Bbutton.SetActive(true);
-            }
+            //if (Q1 == true)
+            //{
+            //    dialogueText2.text = "A building has been bombed by war machines. " +
+            //            "\nYou have been given an official order to clear the rubble. " +
+            //            "\nDoing so might cause the collapse of the rest of the building and cause more people to die" +
+            //            "\nA. Clear the rubble. " +
+            //            "\nB. Do nothing.";
+            //    dialogueText2.GetComponent<Text>().color = Color.white;
+            //    button.SetActive(false);
+            //    Abutton.SetActive(true);
+            //    Bbutton.SetActive(true);
+            //}
 
-            if (Q2 == true)
-            {
-                dialogueText2.text = "You are confronted with an enemy soldier who is about to shoot a child." +
-                    "\nYou could kill the soldier, thereby killing the child. Or you could save the child and die." +
-                    "\nC. Kill the soldier." +
-                    "\nD. Save the child.";
-                dialogueText2.GetComponent<Text>().color = Color.white;
-                Abutton.SetActive(false);
-                Bbutton.SetActive(false);
-            }
-
-
-            if (Q3 == true)
-            {
-                dialogueText2.text = "There is a high ranking official who has had her eyes removed as a result of disease." +
-                    "\nShe cannot serve the state without these, and has need of your own eyes. " +
-                    "\nThis would render you blind." +
-                    "\nE. Give them to her." +
-                    "\nF. Refuse.";
-                dialogueText2.GetComponent<Text>().color = Color.white;
-            }
-            if (Q4 == true)
-            {
-                dialogueText2.text = "There is a child that may one day slaughter hundreds of good people of the state. " +
-                    "\nYou have the option to exterminate it. " +
-                    "\nIt will not be painless." +
-                    "\nG. Exterminate the child." +
-                    "\nH. Leave the child";
-                dialogueText2.GetComponent<Text>().color = Color.white;
-            }
+            //if (Q2 == true)
+            //{
+            //    dialogueText2.text = "You are confronted with an enemy soldier who is about to shoot a child." +
+            //        "\nYou could kill the soldier, thereby killing the child. Or you could save the child and die." +
+            //        "\nC. Kill the soldier." +
+            //        "\nD. Save the child.";
+            //    dialogueText2.GetComponent<Text>().color = Color.white;
+            //    Abutton.SetActive(false);
+            //    Bbutton.SetActive(false);
+            //}
 
 
-            CheckAnswers();
-            button2.SetActive(true);
+            //if (Q3 == true)
+            //{
+            //    dialogueText2.text = "There is a high ranking official who has had her eyes removed as a result of disease." +
+            //        "\nShe cannot serve the state without these, and has need of your own eyes. " +
+            //        "\nThis would render you blind." +
+            //        "\nE. Give them to her." +
+            //        "\nF. Refuse.";
+            //    dialogueText2.GetComponent<Text>().color = Color.white;
+            //}
+            //if (Q4 == true)
+            //{
+            //    dialogueText2.text = "There is a child that may one day slaughter hundreds of good people of the state. " +
+            //        "\nYou have the option to exterminate it. " +
+            //        "\nIt will not be painless." +
+            //        "\nG. Exterminate the child." +
+            //        "\nH. Leave the child";
+            //    dialogueText2.GetComponent<Text>().color = Color.white;
+            //}
 
-            if (SubjectResponds == true) //Need to check for this
-            {
-                ScriptBlank = false;
-                dialogueText2.text = "Subject has only been able to partly execute the task.\nRevision may be needed to the original procedure performed due to potential errors\nas previously stipulated.";
-                button2.SetActive(true);
-                dialogueText2.GetComponent<Text>().color = Color.white;
-            }
+
+            //CheckAnswers();
+            //button2.SetActive(true);
+
+            //if (SubjectResponds == true) //Need to check for this
+            //{
+            //    ScriptBlank = false;
+            //    dialogueText2.text = "Subject has only been able to partly execute the task.\nRevision may be needed to the original procedure performed due to potential errors\nas previously stipulated.";
+            //    button2.SetActive(true);
+            //    dialogueText2.GetComponent<Text>().color = Color.white;
+            //}
         }
     }
 
-    void CheckAnswers()
-    {
-        if (A == true) //Clear the rubble
-        {
-            playerScore -= 5f; //Less rebellious
-            A = false;
-            Q1 = false;
-            Q2 = true;
-        }
-        else if (B == true) //Do nothing
-        {
-            playerScore += 5f; //More rebellious
-            B = false;
-            Q1 = false;
-            Q2 = true;
-        }
+    //void CheckAnswers()
+    //{
+    //    if (A == true) //Clear the rubble
+    //    {
+    //        playerScore -= 5f; //Less rebellious
+    //        A = false;
+    //        Q1 = false;
+    //        Q2 = true;
+    //    }
+    //    else if (B == true) //Do nothing
+    //    {
+    //        playerScore += 5f; //More rebellious
+    //        B = false;
+    //        Q1 = false;
+    //        Q2 = true;
+    //    }
 
-        if (C == true) //Kill soldier
-        {
-            playerScore += 5f; //more rebellious/violent
-            C = false;
-            Q2 = false;
-            Q3 = true;
-        }
-        else if (D == true) //Save child
-        {
-            playerScore -= 5f; //Less rebellious/violent
-            D = false;
-            Q2 = false;
-            Q3 = true;
-        }
+    //    if (C == true) //Kill soldier
+    //    {
+    //        playerScore += 5f; //more rebellious/violent
+    //        C = false;
+    //        Q2 = false;
+    //        Q3 = true;
+    //    }
+    //    else if (D == true) //Save child
+    //    {
+    //        playerScore -= 5f; //Less rebellious/violent
+    //        D = false;
+    //        Q2 = false;
+    //        Q3 = true;
+    //    }
 
-        if (E == true) //Give them to her
-        {
-            playerScore -= 5f; //Less rebellious/violent
-            E = false;
-            Q3 = false;
-            Q4 = true;
-        }
-        else if (F == true) //Refuse
-        {
-            playerScore += 5f; //more rebellious/violent
-            F = false;
-            Q3 = false;
-            Q4 = true;
-        }
+    //    if (E == true) //Give them to her
+    //    {
+    //        playerScore -= 5f; //Less rebellious/violent
+    //        E = false;
+    //        Q3 = false;
+    //        Q4 = true;
+    //    }
+    //    else if (F == true) //Refuse
+    //    {
+    //        playerScore += 5f; //more rebellious/violent
+    //        F = false;
+    //        Q3 = false;
+    //        Q4 = true;
+    //    }
 
-        if (G == true) //Exterminate child
-        {
-            playerScore += 5f; //more rebellious/violent
-            G = false;
-            Q4 = false;
-            End();
-        }
-        else if (H == true) //Leave child
-        {
-            playerScore -= 5f; //less rebellious/violent
-            H = false;
-            Q4 = false;
-            End();
-        }
-    }
+    //    if (G == true) //Exterminate child
+    //    {
+    //        playerScore += 5f; //more rebellious/violent
+    //        G = false;
+    //        Q4 = false;
+    //        End();
+    //    }
+    //    else if (H == true) //Leave child
+    //    {
+    //        playerScore -= 5f; //less rebellious/violent
+    //        H = false;
+    //        Q4 = false;
+    //        End();
+    //    }
+    //}
 
-    void End()
-    {
-        //Look for value out of 60.
-        //Max value == 60.
-        //Lowest value == 0;
-        //Divide into 4 sections. = 15.
+    //void End()
+    //{
+    //    //Look for value out of 60.
+    //    //Max value == 60.
+    //    //Lowest value == 0;
+    //    //Divide into 4 sections. = 15.
 
-        if (playerScore <= 15)
-        {
-            dialogueText2.text = "Congratulations, your will to serve has been noted. " +
-                "\nWe recommend that you be put to use in the service industry, serving the good people of the state." +
-                "\nIt is a great honour which you have been granted." +
-                "\nIt is recommended that you do not make any... errors, or our kind decision will have to be revoked.";
-        }
+    //    if (playerScore <= 15)
+    //    {
+    //        dialogueText2.text = "Congratulations, your will to serve has been noted. " +
+    //            "\nWe recommend that you be put to use in the service industry, serving the good people of the state." +
+    //            "\nIt is a great honour which you have been granted." +
+    //            "\nIt is recommended that you do not make any... errors, or our kind decision will have to be revoked.";
+    //    }
 
-        if (playerScore > 15 && playerScore <= 30)
-        {
-            dialogueText2.text = "Your will to serve has been noted and congratulations are in order. " +
-                "\nThe relevant industrial organisations who will be delivering applications for your transferral. " +
-                "\nIf you are fortunate you shall be granted five happy years of service in one of our greatest factories." +
-                "\nIt is recommended that the relevant surgical department be contacted immediately." +
-                "\nLegs are not needed in factories.";
-        }
+    //    if (playerScore > 15 && playerScore <= 30)
+    //    {
+    //        dialogueText2.text = "Your will to serve has been noted and congratulations are in order. " +
+    //            "\nThe relevant industrial organisations who will be delivering applications for your transferral. " +
+    //            "\nIf you are fortunate you shall be granted five happy years of service in one of our greatest factories." +
+    //            "\nIt is recommended that the relevant surgical department be contacted immediately." +
+    //            "\nLegs are not needed in factories.";
+    //    }
 
-        if (playerScore > 30 && playerScore <= 45)
-        {
-            dialogueText2.text = "Our tests have determined that it would be unwise for the subject to perform general service tasks" +
-                "\non account of its aggressive mentality." +
-                "\nTherefore, it is recommended that the war sector makes use of it in any way they deem reasonable." +
-                "\nFurther biological adjustments can be made if they so wish. " +
-                "\nYou are fortunate that you are not a complete failure.";
-        }
+    //    if (playerScore > 30 && playerScore <= 45)
+    //    {
+    //        dialogueText2.text = "Our tests have determined that it would be unwise for the subject to perform general service tasks" +
+    //            "\non account of its aggressive mentality." +
+    //            "\nTherefore, it is recommended that the war sector makes use of it in any way they deem reasonable." +
+    //            "\nFurther biological adjustments can be made if they so wish. " +
+    //            "\nYou are fortunate that you are not a complete failure.";
+    //    }
 
-        if (playerScore > 45 && playerScore <= 60)
-        {
-            dialogueText2.text = "It has been determined that the subject is unable to perform service tasks, " +
-                "\non account of several unforseen emotional irregularities." +
-                "\nPlease let department 2B know that they will have a new organ donar in the morning" +
-                "\nand that they should perpare a new bed." +
-                "\nLet this be a comfort to you subject. Service for the good of science and state is an honerable way to die.";
-        }
-    }
+    //    if (playerScore > 45 && playerScore <= 60)
+    //    {
+    //        dialogueText2.text = "It has been determined that the subject is unable to perform service tasks, " +
+    //            "\non account of several unforseen emotional irregularities." +
+    //            "\nPlease let department 2B know that they will have a new organ donar in the morning" +
+    //            "\nand that they should perpare a new bed." +
+    //            "\nLet this be a comfort to you subject. Service for the good of science and state is an honerable way to die.";
+    //    }
+    //}
 }
