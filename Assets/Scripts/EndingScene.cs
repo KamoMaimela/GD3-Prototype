@@ -23,7 +23,7 @@ public class EndingScene : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Take to scene 6 showing empty box.
+                SceneManager.LoadScene("Start"); //Take to scene 6 showing empty box.
             }
         }
     }
