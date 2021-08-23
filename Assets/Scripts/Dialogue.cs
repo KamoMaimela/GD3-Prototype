@@ -109,30 +109,31 @@ public class Dialogue : MonoBehaviour
     public void CheckPlayerResponse() //Call this response when player does not/does complete task.
     {
 
-        if (scene.name == "01" || scene.name == "03")
+        if (scene.name == "01" || scene.name == "02")
         {
             if (SubjectResponds == true) //Need to check for this
             {
                 ScriptBlank = false;
-                dialogueText2.text = "Subject has responded. Continue with with necessary tests.";
+                dialogueText2.text = "Subject has responded. Continue with necessary tests.";
                 dialogueText2.GetComponent<Text>().color = Color.white;
-                button2.SetActive(true);
+                //button2.SetActive(true);
+                Invoke("NextScene", 5.0f);
                 button.SetActive(false);
                 timeLeftWarning += 15f;
                 timeLeftEnd += 15f;
             }
         }
 
-        if (scene.name == "02")
-        {
-            if (SubjectResponds == true) //Need to check for this
-            {
-                ScriptBlank = false;
-                dialogueText2.text = "Subject has only been able to partly execute the task.\nRevision may be needed to the original procedure performed due to potential errors\nas previously stipulated.";
-                dialogueText2.GetComponent<Text>().color = Color.white;
-                button2.SetActive(true);
-            }
-        }
+        //if (scene.name == "02")
+        //{
+        //    if (SubjectResponds == true) //Need to check for this
+        //    {
+        //        ScriptBlank = false;
+        //        dialogueText2.text = "Subject has only been able to partly execute the task.\nRevision may be needed to the original procedure performed due to potential errors\nas previously stipulated.";
+        //        dialogueText2.GetComponent<Text>().color = Color.white;
+        //        button2.SetActive(true);
+        //    }
+        //}
 
         if (EndTimer == false)
         {
@@ -161,7 +162,8 @@ public class Dialogue : MonoBehaviour
                 dialogueText2.text = "The task has not been executed. \nHenceforth, it is recommended that the subject be terminated.";
                 dialogueText2.GetComponent<Text>().color = Color.red;
 
-                button2.SetActive(true);
+                Invoke("RestartScene", 5.0f);
+                //button2.SetActive(true);
             }
         }
 
@@ -170,6 +172,15 @@ public class Dialogue : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+    }
+    void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void EndDialogue()
